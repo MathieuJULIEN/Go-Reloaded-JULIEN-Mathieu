@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	"go-reloaded/src/decoupage"
-	"go-reloaded/src/lecture"
+	"go-reloaded/src/gestiontxt"
 )
 
 func main() {
-	a := lecture.Lecture("Sample.txt")
+	a := gestiontxt.Lecture("Sample.txt")
 	fmt.Println(a)
-	decoupage.Decoupage(a)
+	gestiontxt.Ecriture(a)
 }

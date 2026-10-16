@@ -1,4 +1,4 @@
-package lecture
+package gestiontxt
 
 import (
 	"io/fs"
