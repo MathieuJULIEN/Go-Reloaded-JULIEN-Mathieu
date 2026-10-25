@@ -1,2 +1,5 @@
 Simply add 42 (hex) and 10 (bin) and you will see the result is 68.
 Punctuation tests are ... kinda boring ,what do you think ?
+Essaie testup (up) TESTLOW (low) testCAP (cap)
+Try because this is a experience requierd
+essaie 'bonjour test un deux' trois essaie fini
