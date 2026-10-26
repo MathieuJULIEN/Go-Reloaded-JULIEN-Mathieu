@@ -81,3 +81,4 @@ Consigne :
 dans votre texte si vous mettez (hex) : ce qu'il y aura écrit devant devra etre de l'hexadecimal et le fait d'écrire le (hex) va transformer le nombre devant et le transformer en décimal , pareil pour le binaire mais avec (bin)
 Si vous utiliser (up) ou (low) ou (cap) cela va transformer le mot avant en, pour (up) mettre le mot tout en majuscule, pour le (low) tout en minuscule , et pour le (cap) ca va mettre la premiere lettre en majuscule.
 également le programme va formater les caracteres comme les virgules pour les coller au mot précedent (exemple: "test , test" --> "test, test")
+également le programme va formater les caracteres comme les apostrophes pour les coller au mot encadrer (exemple: "test ' test test ' test" --> "test 'test test' test")
