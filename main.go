@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"go-reloaded/src/apostrophe"
 	"go-reloaded/src/atoan"
 	"go-reloaded/src/convertisseur"
@@ -9,19 +8,18 @@ import (
 	"go-reloaded/src/forme"
 	"go-reloaded/src/gestiontxt"
 	"go-reloaded/src/ponctuation"
+	"go-reloaded/src/saisifichier"
 )
 
 func main() {
-	a := gestiontxt.Lecture("Sample.txt")
+	saisi := saisifichier.SaisiFichier()
+	a := gestiontxt.Lecture(saisi)
 	decoupage.Decoupage(a)
 	convertisseur.Convertisseur()
 	forme.Forme()
 	ponctuation.Ponctuation()
-	fmt.Println(decoupage.ListeMot)
 	atoan.AtoAn()
-	fmt.Println(decoupage.ListeMot)
 	apostrophe.Apostrophe()
-	fmt.Println(decoupage.ListeMot)
 	b := ponctuation.StringList(decoupage.ListeMot)
 	gestiontxt.Ecriture(b)
 }

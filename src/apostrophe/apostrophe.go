@@ -5,7 +5,7 @@ import "go-reloaded/src/decoupage"
 func Apostrophe() {
 	var compte int = 0
 	for a := 0; a < len(decoupage.ListeMot); a++ {
-		if string(decoupage.ListeMot[a][0]) == "'" {
+		if decoupage.ListeMot[a] == "'" {
 			compte += 1
 			if compte == 1 {
 				decoupage.ListeMot[a+1] = "'" + decoupage.ListeMot[a+1]

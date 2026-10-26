@@ -56,7 +56,7 @@ Faire CTRL + K + T
 Sélectionner Light (Visual Studio) Visual Studio Light
 Aller dans le dossier a gauche nommé fichiertxt
 cliquer sur Sample.txt
-écrit ce que tu souhaites en connaissant les consignes si dessous(Ligne:??)
+écrit ce que tu souhaites en connaissant les consignes si dessous(Ligne:80)
 
 Ou Alors crée ton .txt avec ce que tu veux écrire dedans avec les mêmes consignes
 va dans tes dossier
@@ -70,6 +70,14 @@ Et ici déposer votre fichier.txt
 retourner sur votre VScode
 cliquer sur Terminal en haut a gauche
 cliquer sur New Terminal
-saisi "go run . [Le nom du fichier.txt]" (Sample.txt si vous avez choisi d'écrire dans le Sample.txt ou alors le nom de votre fichier que vous avez déposé précedement)
+saisi "go run main.go 
+fait entrez
+saisi [Le nom du fichier.txt]" (Sample.txt si vous avez choisi d'écrire dans le Sample.txt ou alors le nom de votre fichier que vous avez déposé précedement)
+fait entrez
 
 Votre texte avec les modifications appliqué apparaitrera dans le fichier texte Result.txt
+
+Consigne :
+dans votre texte si vous mettez (hex) : ce qu'il y aura écrit devant devra etre de l'hexadecimal et le fait d'écrire le (hex) va transformer le nombre devant et le transformer en décimal , pareil pour le binaire mais avec (bin)
+Si vous utiliser (up) ou (low) ou (cap) cela va transformer le mot avant en, pour (up) mettre le mot tout en majuscule, pour le (low) tout en minuscule , et pour le (cap) ca va mettre la premiere lettre en majuscule.
+également le programme va formater les caracteres comme les virgules pour les coller au mot précedent (exemple: "test , test" --> "test, test")
