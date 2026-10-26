@@ -1,6 +1,9 @@
 package ponctuation
 
-import "strings"
+import (
+	"go-reloaded/src/decoupage"
+	"strings"
+)
 
 func CestPonctuation(mot string) bool {
 	if len(mot) == 1 {
@@ -21,15 +24,14 @@ func CestPonctuation(mot string) bool {
 	return false
 }
 
-func Ponctuation(liste []string) []string {
-	for a := 0; a < len(liste); a++ {
-		if CestPonctuation(liste[a]) && a > 0 {
-			liste[a-1] += liste[a]
-			liste = append(liste[:a], liste[a+1:]...)
+func Ponctuation() {
+	for a := 0; a < len(decoupage.ListeMot); a++ {
+		if CestPonctuation(decoupage.ListeMot[a]) && a > 0 {
+			decoupage.ListeMot[a-1] += decoupage.ListeMot[a]
+			decoupage.ListeMot = append(decoupage.ListeMot[:a], decoupage.ListeMot[a+1:]...)
 			a--
 		}
 	}
-	return liste
 }
 
 func StringList(list []string) string {

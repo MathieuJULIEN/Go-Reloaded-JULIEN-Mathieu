@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go-reloaded/src/atoan"
 	"go-reloaded/src/convertisseur"
 	"go-reloaded/src/decoupage"
 	"go-reloaded/src/forme"
@@ -12,10 +13,13 @@ import (
 func main() {
 	a := gestiontxt.Lecture("Sample.txt")
 	decoupage.Decoupage(a)
-	convertisseur.Convertisseur(decoupage.ListeMot)
-	forme.Forme(decoupage.ListeMot)
-	decoupage.ListeMot = ponctuation.Ponctuation(decoupage.ListeMot)
+	convertisseur.Convertisseur()
+	forme.Forme()
+	ponctuation.Ponctuation()
+	fmt.Println(decoupage.ListeMot)
+	atoan.AtoAn()
 	fmt.Println(decoupage.ListeMot)
 	b := ponctuation.StringList(decoupage.ListeMot)
+	fmt.Println(decoupage.ListeMot)
 	gestiontxt.Ecriture(b)
 }

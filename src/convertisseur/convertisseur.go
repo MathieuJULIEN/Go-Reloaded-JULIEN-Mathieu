@@ -6,10 +6,10 @@ import (
 	"strconv"
 )
 
-func Convertisseur(liste []string) {
-	for a := range liste {
-		if liste[a] == "(hex)" {
-			provi, err := strconv.ParseInt(liste[a-1], 16, 64)
+func Convertisseur() {
+	for a := 0; a < len(decoupage.ListeMot); a++ {
+		if decoupage.ListeMot[a] == "(hex)" {
+			provi, err := strconv.ParseInt(decoupage.ListeMot[a-1], 16, 64)
 			if err == nil {
 				decoupage.ListeMot[a-1] = strconv.FormatInt(provi, 10)
 				decoupage.ListeMot = append(decoupage.ListeMot[:a], decoupage.ListeMot[a+1:]...)
@@ -17,8 +17,8 @@ func Convertisseur(liste []string) {
 			} else {
 				fmt.Println("Erreur: Ce qu'il y a avant le (hex) n'est pas de l'hexadecimal")
 			}
-		} else if liste[a] == "(bin)" {
-			provi, err := strconv.ParseInt(liste[a-1], 2, 64)
+		} else if decoupage.ListeMot[a] == "(bin)" {
+			provi, err := strconv.ParseInt(decoupage.ListeMot[a-1], 2, 64)
 			if err == nil {
 				decoupage.ListeMot[a-1] = strconv.FormatInt(provi, 10)
 				decoupage.ListeMot = append(decoupage.ListeMot[:a], decoupage.ListeMot[a+1:]...)
