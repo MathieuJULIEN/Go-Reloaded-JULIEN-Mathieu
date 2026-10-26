@@ -1,5 +1,5 @@
-Simply add 66 and 2 and you will see the result is68.
-Punctuation tests are... kinda boring,what do you think?
-Essaie TESTUP testlow testCAP (cap)
-Try because this is a experience requierd
-essaie ' bonjour test un deux 'trois essaie fini
+Simply add 66 and 2 and you will see the result is 68.
+Punctuation tests are...  kinda boring, what do you think? 
+Essaie TESTUP testlow TestCAP fin test
+Try because this is an experience requierd
+essaie 'bonjour test un deux 'trois essaie fini

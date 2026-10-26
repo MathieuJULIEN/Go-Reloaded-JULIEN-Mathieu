@@ -5,30 +5,38 @@ import (
 	"strings"
 )
 
-func CestPonctuation(mot string) bool {
+func CestPonctuation(mot string) (bool, int) {
+	var nb int = 0
 	if len(mot) == 1 {
 		if mot == "," || mot == "." || mot == "!" || mot == "?" || mot == ":" || mot == ";" {
-			return true
+			return true, 1
 		}
 	} else {
 		for a := range mot {
 			if string(mot[a]) != "," && string(mot[a]) != "." && string(mot[a]) != "!" && string(mot[a]) != "?" && string(mot[a]) != ":" && string(mot[a]) != ";" {
-				if a == len(mot)-1 {
-					return false
+				if a == 0 {
+					return false, 0
+				} else {
+					return true, nb
 				}
 			} else {
-				return true
+				nb++
+				if a == len(mot)-1 {
+					return true, nb
+				}
 			}
 		}
 	}
-	return false
+	return false, 0
 }
 
 func Ponctuation() {
 	for a := 0; a < len(decoupage.ListeMot); a++ {
-		if CestPonctuation(decoupage.ListeMot[a]) && a > 0 {
-			decoupage.ListeMot[a-1] += decoupage.ListeMot[a]
-			decoupage.ListeMot = append(decoupage.ListeMot[:a], decoupage.ListeMot[a+1:]...)
+		tempo, nb := CestPonctuation(decoupage.ListeMot[a])
+		if tempo == true && a > 0 {
+			decoupage.ListeMot[a-1] += decoupage.ListeMot[a][:nb]
+			decoupage.ListeMot[a] = decoupage.ListeMot[a][nb:]
+			decoupage.ListeMot = append(decoupage.ListeMot[:a], decoupage.ListeMot[a:]...)
 			a--
 		}
 	}

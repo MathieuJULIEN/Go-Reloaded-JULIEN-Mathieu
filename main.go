@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go-reloaded/src/apostrophe"
 	"go-reloaded/src/atoan"
 	"go-reloaded/src/convertisseur"
 	"go-reloaded/src/decoupage"
@@ -18,6 +19,8 @@ func main() {
 	ponctuation.Ponctuation()
 	fmt.Println(decoupage.ListeMot)
 	atoan.AtoAn()
+	fmt.Println(decoupage.ListeMot)
+	apostrophe.Apostrophe()
 	fmt.Println(decoupage.ListeMot)
 	b := ponctuation.StringList(decoupage.ListeMot)
 	gestiontxt.Ecriture(b)
