@@ -20,6 +20,5 @@ func main() {
 	atoan.AtoAn()
 	fmt.Println(decoupage.ListeMot)
 	b := ponctuation.StringList(decoupage.ListeMot)
-	fmt.Println(decoupage.ListeMot)
 	gestiontxt.Ecriture(b)
 }

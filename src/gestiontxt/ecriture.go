@@ -6,7 +6,7 @@ import (
 )
 
 func Ecriture(s string) {
-	err := os.WriteFile("src/fichiertxt/Result.txt", []byte(s), 0644)
+	err := os.WriteFile("fichiertxt/Result.txt", []byte(s), 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
